@@ -1,4 +1,3 @@
-// src/test/StoreServiceTest2.java
 package test;
 
 import model.*;
