@@ -2,12 +2,14 @@ package model;
 
 import exception.ExpiredGoodException;
 import util.DateUtil;
+import java.math.BigDecimal;
+import java.time.LocalDate;
 
 
 public abstract class Good {
     private String id;
     private String name;
-    private double unitDeliveryPrice;
+    private BigDecimal unitDeliveryPrice;
     private String category;
     private LocalDate expirationDate;
     private int quantity;
@@ -52,7 +54,7 @@ public abstract class Good {
         this.quantity -= amount;
     }
 
-    public abstract double getSellingPrice(int daysUntilExpiration);
+    public abstract BigDecimal getSellingPrice(int daysUntilExpiration);
 
     public boolean isExpired(LocalDate currentDate) {
         return expirationDate.isBefore(currentDate) || expirationDate.isEqual(currentDate);
