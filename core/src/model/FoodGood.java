@@ -3,9 +3,9 @@ package model;
 import util.DateUtil;
 
 public class FoodGood extends Good {
-    private static final double MARKUP_PERCENTAGE = 0.20; // 20%
-    private static final int DISCOUNT_DAYS = 5; // Customizable as per store's policy
-    private static final double DISCOUNT_PERCENTAGE = 0.10; // 10%
+    private static final double MARKUP_PERCENTAGE = 0.20;
+    private static final int DISCOUNT_DAYS = 5;
+    private static final double DISCOUNT_PERCENTAGE = 0.10;
 
     public FoodGood(String id, String name, double unitDeliveryPrice, LocalDate expirationDate, int quantity) {
         super(id, name, unitDeliveryPrice, "Food", expirationDate, quantity);
