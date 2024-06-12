@@ -14,5 +14,5 @@ public class NonFoodGood extends Good {
     @Override
     public BigDecimal getSellingPrice(int daysUntilExpiration) {
         return getUnitDeliveryPrice().multiply(BigDecimal.valueOf(1 + MARKUP_PERCENTAGE));
-    }s
+    }
 }
